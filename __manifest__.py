@@ -8,6 +8,7 @@
     'depends': ['base', 'account', 'sale'],
     'data': [
         'views/account_tax_views.xml',
+        'views/res_config_settings_inherit_view.xml',
     ],
     'installable': True,
     'application': False,
