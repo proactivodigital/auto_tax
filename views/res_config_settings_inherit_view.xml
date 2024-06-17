@@ -8,16 +8,12 @@
             <field name="arch" type="xml">
                 <setting id="default_taxes" position="before">
                     <setting id="custom_settings_uvt">
-                        <div class="row mt16 o_settings_container" name="custom_setting_container">
-                            <div class="col-xs-12 col-md-6 o_settings_box" id="custom_setting">
-                                <div class="o_setting_right_pane">
-                                    <div class="o_row">
-                                        <label for="uvt_value_tax" class="o_form_label">Valor UVT</label>
-                                        <div class="o_input">
-                                            <field name="uvt_value_tax" class="o_input"/>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="content-group" name="custom_setting_container">
+                            <div class="row mt16">
+                                <label for="uvt_value_tax" class="col-lg-3 o_light_label">Valor UVT</label>
+                            </div>
+                            <div class="row">
+                                <field name="uvt_value_tax"/>
                             </div>
                         </div>
                     </setting>
