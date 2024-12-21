@@ -1,13 +1,20 @@
 <odoo>
     <data>
-        <!-- Definición de la vista personalizada -->
+        <!-- Definition of the customized view for the 'account.tax' model -->
         <record id="view_tax_form_inherited" model="ir.ui.view">
+            <!-- Name of the custom view -->
             <field name="name">account.tax.form.inherited</field>
+            
+            <!-- The model associated with the view -->
             <field name="model">account.tax</field>
+            
+            <!-- Specifies the original view to inherit from -->
             <field name="inherit_id" ref="account.view_tax_form"/>
-            <field name="arch" type="xml">
+            
+            <field name="arch" type="xml"> <!-- Defines the structure of the view -->
+                <!-- The 'xpath' expression identifies where the new fields will be inserted in the existing view -->
                 <xpath expr="//field[@name='active']" position="after">
-                    <!-- Agrega tus campos personalizados aquí -->
+                    <!-- Adding the custom fields after the 'active' field -->
                     <field name="tax_type" string="Tipo de monto minimo"/>
                     <field name="uvt_amount" string="Monto minimo en UVT"/>
                 </xpath>

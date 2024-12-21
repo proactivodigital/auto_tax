@@ -1,19 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>  <!-- Declares the XML version and character encoding -->
 <odoo>
-    <data>
+    <data>  <!-- The 'data' tag contains the records that define the structure and views of the module -->
+        
+        <!-- Inherits and modifies the existing view for 'res.config.settings' -->
         <record id="res_config_settings_view_form_inherit_account" model="ir.ui.view">
+            <!-- Name of the view -->
             <field name="name">res.config.settings.view.form.inherit.account</field>
+            
+            <!-- Model to which the view is associated -->
             <field name="model">res.config.settings</field>
+            
+            <!-- Specifies which view this one inherits from -->
             <field name="inherit_id" ref="account.res_config_settings_view_form"/>
-            <field name="arch" type="xml">
+            
+            <field name="arch" type="xml"> <!-- Defines the XML structure of the view -->
+                <!-- The 'position' attribute specifies where to place the new fields -->
                 <div class="row mt16 o_settings_container" name="default_taxes_setting_container" position="before">
+                    <!-- Custom settings section for UVT -->
                     <div id="custom_settings_uvt">
                         <div class="row mt16 o_settings_container" name="custom_setting_container">
                             <div class="col-xs-12 col-md-6 o_settings_box" id="custom_setting">
+                                <!-- Defines the settings box and layout for the new field -->
                                 <div class="o_setting_right_pane">
                                     <div class="o_row">
+                                        <!-- Label for the new field -->
                                         <label for="uvt_value_tax" class="o_form_label">Valor UVT</label>
                                         <div class="o_input">
+                                            <!-- The field where the user will enter the UVT value -->
                                             <field name="uvt_value_tax" class="o_input"/>
                                         </div>
                                     </div>
