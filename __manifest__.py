@@ -8,7 +8,7 @@
     'depends': ['base', 'account', 'sale'],  # List of modules that this module depends on
     'data': [
         'views/account_tax_views.xml',  # The view that will define the user interface for the custom fields
-        
+        'views/res_config_settings_inherit_view.xml',  # Inherited view for configuration settings related to the module
     ],
     'installable': True,  # Indicates that the module can be installed
     'application': False,  # Indicates that this is not a standalone application in Odoo's dashboard
